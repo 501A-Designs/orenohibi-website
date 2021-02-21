@@ -84,13 +84,13 @@ button:hover{
     background-color: black;
     color: #73b700;
 }
-header,section, footer{
+header, section, footer{
     height: 100vh;
     background-color: white;
     padding: var(--padding);
 }
 
-.logo{
+.logo, .logoAni{
     width: 100px;
     height: 100px;
     margin: -5px;
@@ -179,4 +179,32 @@ header, footer{
     height: 65px;
     float: left;
     margin-right: 10px;
+}
+
+.logoAni{
+    animation: logoAni 1s;
+}
+@keyframes logoAni{
+    50%{
+        transform: scale3d(1.5, 1.5, 1.5);
+    }
+    100%{
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.headerAni{
+    background-color: black;
+    color:white;
+    animation: headerAni 0.8s;
+}
+@keyframes headerAni{
+    0%{
+        background-color: white;
+    }
+    100%{
+        /* transform: scale3d(0.5, 0.5, 0.5); */
+        color: white;
+        background-color: black;
+    }
 }

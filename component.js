@@ -23,6 +23,8 @@ h3{
 img{
     transition: 0.5s;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     border: 3px solid black;
 }
 p{
