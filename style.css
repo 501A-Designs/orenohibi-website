@@ -4,6 +4,16 @@
     --h1:300%;
     --h2:250%;
     --h3:200%;
+
+    --orenoGreen:#73b700;
+}
+
+
+::selection {
+    background: var(--orenoGreen);
+}
+::-moz-selection {
+    background: var(--orenoGreen);
 }
 
 /* TEXT */
@@ -82,7 +92,7 @@ button{
 button:hover{
     cursor:pointer;
     background-color: black;
-    color: #73b700;
+    color: var(--orenoGreen);
 }
 header{
     height: 100vh;
@@ -173,7 +183,7 @@ header, footer{
 }
 
 .green{
-    background-color: #73b700;
+    background-color: var(--orenoGreen);
     color:black;
 }
 .black{
@@ -217,28 +227,24 @@ header, footer{
 }
 
 .wallpaper{
-  box-shadow: 12px 29px 81px 0px rgba(197, 197, 197, 0.75);
+  /* box-shadow: 12px 29px 81px 0px rgba(175, 175, 175, 0.75); */
   z-index: 0;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  animation: wallpaperBlurAni 10s infinite;
+  animation: wallpaperBlurAni 5s infinite;
 }
 
-/* @keyframes wallpaperBlurAni{
+@keyframes wallpaperBlurAni{
     0%{
-        opacity: 0.5;
-        filter: blur(10px);
-        -webkit-filter: blur(10px);
+        opacity: 0.8;
+        filter: contrast(120%);
     }
     50%{
         opacity: 1;
-        filter: blur(30px);
-        -webkit-filter: blur(30px);
     }
     100%{
-        opacity: 0.5;
-        filter: blur(10px);
-        -webkit-filter: blur(10px);
+        filter: contrast(120%);
+        opacity: 0.8;
     }
-} */
+}
