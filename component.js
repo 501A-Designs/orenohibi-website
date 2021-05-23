@@ -19,7 +19,7 @@ h3{
 }
 .imgCardClass {
   position: relative;
-    animation:combackAni 1s;
+  animation:combackAni 1s;
 }
 img{
   transition: 0.5s;
@@ -31,6 +31,7 @@ img{
 #imgBlur{
   position: absolute;
   transform: scale(1.02,1.02);
+  background-color:radial-gradient(86.36% 107.55% at 6.49% 12.32%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%);
   z-index: -1;
   background-size: cover;
   border-radius: 5px;
@@ -43,7 +44,6 @@ img{
   transition:0.5s;
 }
 p{
-    color:white;
     margin:0px;
     padding: var(--padding);
     margin-top:-14px;
@@ -61,7 +61,7 @@ p{
 .popUp {
     box-shadow: 5px 5px 10px grey;
     z-index: 2;
-    background-color:black;
+    background-color:white;
     position: fixed;
     overflow-y: auto;
     padding:var(--padding);
@@ -110,6 +110,7 @@ p{
             transform: scale3d(0.5, 0.5, 0.5);
         }
         35%{
+            top:0px;
             transform: scale3d(1.05, 1.05, 1.05);
         }
     }
