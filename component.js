@@ -18,14 +18,29 @@ h3{
     margin: var(--margin);
 }
 .imgCardClass {
+  position: relative;
     animation:combackAni 1s;
 }
 img{
-    transition: 0.5s;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border: 3px solid black;
+  transition: 0.5s;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius:5px;
+}
+#imgBlur{
+  position: absolute;
+  transform: scale(1.02,1.02);
+  z-index: -1;
+  background-size: cover;
+  border-radius: 5px;
+  object-fit: cover;
+  opacity:0.8;
+  filter: blur(20px);
+  margin-top:-95%;
+  width:100%;
+  height:90%;
+  transition:0.5s;
 }
 p{
     color:white;
@@ -35,8 +50,12 @@ p{
 }
 .imgCardClass img:hover{
     cursor: pointer;
-    box-shadow: 0px 25px 15px grey;
-    transform:scale3d(1.05, 1.05, 1.05);
+    transform:scale3d(0.95, 0.95, 0.95);
+}
+.imgCardClass:hover #imgBlur{
+  opacity:0.5;
+  filter: blur(15px);
+  height:95%;
 }
 
 .popUp {
@@ -47,6 +66,7 @@ p{
     overflow-y: auto;
     padding:var(--padding);
     transform: scale3d(1, 1, 1);
+    border-radius:5px;
     transition:1s;
     animation: popUpAni 1s;
 }
@@ -143,11 +163,12 @@ p{
   </style>
   <section class="imgCardClass">
     <button>CLOSE</button>
-    <h3></h3>
     <div>
-        <img alt="No Image">
-        <p style="display:none"></p>
+      <img alt="No Image" />
+      <p style="display:none"></p>
     </div>
+    <div id="imgBlur"></div>
+    <h3></h3>
   </section>
 `;
 class imgCard extends HTMLElement {
@@ -168,7 +189,10 @@ class imgCard extends HTMLElement {
     const p = this.shadowRoot.querySelector('p');
     const imgHref = this.getAttribute('imgHref');
     const img = this.shadowRoot.querySelector('img');
+    const imgBlur = this.shadowRoot.getElementById('imgBlur');
+
     img.setAttribute('src', `${imgHref}`);
+    imgBlur.setAttribute('style', `background-image: url("${imgHref}");`);
       
     img.addEventListener('click', function() {
         section.setAttribute('class', 'popUp');
