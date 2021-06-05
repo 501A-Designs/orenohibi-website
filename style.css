@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
 :root{
     --margin:10px;
     --padding:15px;
@@ -14,6 +16,24 @@
 }
 ::-moz-selection {
     background: var(--orenoGreen);
+}
+::-webkit-scrollbar {
+    border-radius: 5px;
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--orenoGreen);
+    border-radius: 5px;
+}
+::-webkit-scrollbar-track {
+    background-color: black;
+}
+
+
+hr{
+    border: 1px solid var(--orenoGreen);
+    border-radius: 5px;
 }
 
 /* TEXT */
@@ -70,17 +90,23 @@ h4{
     text-align: left;
 }
 
+h3 .material-icons{
+    font-size: 1em;
+    transform: translateY(5px);
+}
+
 /* TAGS */
 body{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     margin: 0px;
     padding:0px;
+    overflow-x: hidden;
 }
 button{
     outline:none;
     border: 2px solid black;
-    background-color: white;
+    background-color: transparent;
     color: black;
     padding: 1em;
     padding-top: 0.5em;
@@ -126,7 +152,7 @@ header, footer{
 }
 
 /* CLASS */
-.triGrid, .quadGrid{
+.recipeGrid, .triGrid, .quadGrid{
     display: grid;
     gap: calc(var(--margin)*2);
 }
@@ -135,12 +161,18 @@ header, footer{
     background-color: black;
 }
 
+card-carousel img{
+    border-radius: 5px;
+    width: 120px;
+    height: 120px;
+}
+
 @media only screen and (max-width: 400px) {
     section, .imgDiv{
         padding-right: 10%;
         padding-left: 10%;
     }
-    .triGrid, .quadGrid{
+    .recipeGrid, .triGrid, .quadGrid{
         grid-template-columns: 1fr;
     }
 }
@@ -149,7 +181,7 @@ header, footer{
         padding-right: 13%;
         padding-left: 13%;
     }
-    .triGrid, .quadGrid{
+    .recipeGrid, .triGrid, .quadGrid{
         grid-template-columns: 1fr;
     }
 }
@@ -158,6 +190,7 @@ header, footer{
         padding-right: 10%;
         padding-left: 10%;
     }
+    .recipeGrid,
     .triGrid{
         grid-template-columns: 1fr;
     }
@@ -169,6 +202,9 @@ header, footer{
     section, .imgDiv{
         padding-right: 15%;
         padding-left: 15%;
+    }
+    .recipeGrid{
+        grid-template-columns: 1fr 2.5fr;
     }
     .triGrid{
         grid-template-columns: 1fr 1fr 1fr;

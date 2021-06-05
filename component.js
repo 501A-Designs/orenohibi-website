@@ -64,34 +64,31 @@ p{
     background-color:white;
     position: fixed;
     overflow-y: auto;
+    overflow-x:hidden;
     padding:var(--padding);
     transform: scale3d(1, 1, 1);
     border-radius:5px;
     transition:1s;
     animation: popUpAni 1s;
 }
-
-.popUp h3{
-    color: #73b700;
-}
     button{
         outline:none;
-        border: 2px solid white;
-        background-color:black;
-        color:white;
+        border: 2px solid black;
+        background-color: transparent;
+        color: black;
         padding: 1em;
         padding-top: 0.5em;
         padding-bottom: 0.5em;
         transition: 0.5s;
         font-weight:bold;
+        margin: 0px;
         float:right;
         z-index:3;
     }
     button:hover{
-        border: 2px solid black;
-        background-color: #73b700;
-        color:black;
-        cursor:pointer;
+      cursor:pointer;
+      background-color: black;
+      color: var(--orenoGreen);
     }
     .popUp div{
         display: grid;
@@ -163,13 +160,13 @@ p{
     }    
   </style>
   <section class="imgCardClass">
-    <button>CLOSE</button>
+  <button>CLOSE</button>
+    <h3></h3>
     <div>
-      <img alt="No Image" />
-      <p style="display:none"></p>
+    <img alt="No Image" />
+    <p style="display:none"><slot></slot></p>
     </div>
     <div id="imgBlur"></div>
-    <h3></h3>
   </section>
 `;
 class imgCard extends HTMLElement {
@@ -179,7 +176,7 @@ class imgCard extends HTMLElement {
     this.shadowRoot.appendChild(template.content.cloneNode(true));
 
     this.shadowRoot.querySelector('h3').innerText = this.getAttribute('header');
-    this.shadowRoot.querySelector('p').innerText = this.innerHTML;
+    // this.shadowRoot.querySelector('p').innerText = this.innerHTML;
       
     if (this.getAttribute('header') === null) {
       this.shadowRoot.querySelector('h1').remove();
@@ -271,3 +268,122 @@ class loadAnimation extends HTMLElement {
   }
 }
 window.customElements.define('load-animation', loadAnimation);
+
+// CONTENT CARD
+template.innerHTML = `
+<style>
+section{
+  margin-top:5%;
+  margin-bottom:1%;
+  display:flex;
+  justify-content:center;
+}
+img{
+  width:200px;
+  height:200px;
+  object-fit: cover;
+  border-radius:100px;
+  animation: imgAni 1s;
+}
+@keyframes imgAni{
+  0%{
+    transform:scale3d(0.5, 0.5, 0.5);
+  }
+  50%{
+    transform:scale3d(1.1, 1.1, 1.1);
+  }
+  100%{
+    transform:scale3d(1, 1, 1);
+  }
+}
+#imgBlur{
+  position: absolute;
+  transform: scale(1.02,1.02);
+  background-color:radial-gradient(86.36% 107.55% at 6.49% 12.32%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%);
+  z-index: -1;
+  background-size: cover;
+  opacity:0.5;
+  filter: blur(20px);
+  margin-top:-5%;
+  width: 100%;
+  height: 20%;
+  max-height:200px;
+  object-fit: cover;
+  border-radius:100px;
+  animation:imgBlurAni 1s;
+}
+@keyframes imgBlurAni{
+  0%{
+    opacity:0.8;
+    margin-top:-20%;
+  }
+  50%{
+    margin-top:-4%;
+  }
+  100%{
+    margin-top:-5%;
+  }
+}
+  </style>
+  <section>
+    <img alt="No Image" />
+    <div id="imgBlur"></div>
+  </section>
+`;
+class imgCutOut extends HTMLElement {
+  constructor() {
+    super();
+    this.attachShadow({ mode: 'open' });
+    this.shadowRoot.appendChild(template.content.cloneNode(true));
+      
+    const section = this.shadowRoot.querySelector('section');
+    const imgHref = this.getAttribute('imgHref');
+    const img = this.shadowRoot.querySelector('img');
+    const imgBlur = this.shadowRoot.getElementById('imgBlur');
+
+    img.setAttribute('src', `${imgHref}`);
+    imgBlur.setAttribute('style', `background-image: url("${imgHref}");`);
+  }
+}
+window.customElements.define('img-cutout', imgCutOut);
+
+const cardCarouselTemplate = document.createElement('template');
+cardCarouselTemplate.innerHTML = `
+  <style>
+  ::-webkit-scrollbar {
+    border-radius: 5px;
+    width: 7px;
+    height: 7px;
+  }
+  ::-webkit-scrollbar-thumb {
+      background-color: var(--orenoGreen);
+      border-radius: 5px;
+  }
+  ::-webkit-scrollbar-track {
+      margin: var(--margin);
+  }
+  section{
+    padding-bottom:5px;
+    display: flex;
+    flex-direction: row;
+    border-radius:10px;
+    overflow-x: scroll;
+  }
+  ::slotted(*){
+    width:300px;
+    border-radius:5px;
+    margin-right:10px;
+  }
+  </style>
+  <section>
+    <slot></slot>
+  </section>
+`;
+class imgCarouselContainer extends HTMLElement {
+  constructor() {
+    super();
+    this.attachShadow({ mode: 'open' });
+    this.shadowRoot.appendChild(cardCarouselTemplate.content.cloneNode(true));
+  }
+}
+window.customElements.define('img-carousel', imgCarouselContainer);
