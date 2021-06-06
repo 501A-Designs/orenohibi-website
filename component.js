@@ -36,7 +36,7 @@ img{
   background-size: cover;
   border-radius: 5px;
   object-fit: cover;
-  opacity:0.8;
+  opacity:0.5;
   filter: blur(20px);
   margin-top:-95%;
   width:100%;
