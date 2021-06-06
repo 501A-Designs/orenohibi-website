@@ -268,10 +268,11 @@ card-carousel img{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  filter: contrast(110%);
   animation: wallpaperBlurAni 5s infinite;
 }
 
-@keyframes wallpaperBlurAni{
+/* @keyframes wallpaperBlurAni{
     0%{
         opacity: 0.8;
         filter: contrast(120%);
@@ -283,4 +284,4 @@ card-carousel img{
         filter: contrast(120%);
         opacity: 0.8;
     }
-}
+} */
