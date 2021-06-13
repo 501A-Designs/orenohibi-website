@@ -219,8 +219,8 @@ h3{
 }
 img{
   transition: 0.5s;
-  width: 100%;
-  height: 100%;
+  width: 300px;
+  height: 300px;
   object-fit: cover;
   border-radius:5px;
 }
@@ -478,3 +478,48 @@ class imgCarouselContainer extends HTMLElement {
   }
 }
 window.customElements.define('img-carousel', imgCarouselContainer);
+
+
+// recipe carousel
+const recipeCarouselTemplate = document.createElement('template');
+recipeCarouselTemplate.innerHTML = `
+  <style>
+  ::-webkit-scrollbar {
+    border-radius: 5px;
+    width: 7px;
+    height: 7px;
+  }
+  ::-webkit-scrollbar-thumb {
+      background-color: var(--orenoGreen);
+      border-radius: 5px;
+  }
+  ::-webkit-scrollbar-track {
+      margin: var(--margin);
+  }
+  section{
+    height:400px;
+    padding:25px;
+    margin-bottom:100px;
+    display: flex;
+    flex-direction: row;
+    border-radius:10px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+  ::slotted(*){
+    margin-right:20px;
+  }
+  </style>
+  <section>
+    <slot></slot>
+  </section>
+`;
+class recipeCarouselContainer extends HTMLElement {
+  constructor() {
+    super();
+    this.attachShadow({ mode: 'open' });
+    this.shadowRoot.appendChild(recipeCarouselTemplate.content.cloneNode(true));
+  }
+}
+window.customElements.define('recipe-carousel', recipeCarouselContainer);
+
