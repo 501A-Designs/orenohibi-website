@@ -235,8 +235,8 @@ img{
   opacity:0.5;
   filter: blur(20px);
   margin-top:-95%;
-  width:100%;
-  height:90%;
+  width: 300px;
+  height: 300px;
   transition:0.5s;
 }
 
@@ -247,7 +247,7 @@ img{
 .imgCardClass:hover #imgBlur{
   opacity:0.5;
   filter: blur(15px);
-  height:95%;
+  height:90%;
 }      
 @keyframes combackAni{
     0%{
@@ -498,7 +498,7 @@ recipeCarouselTemplate.innerHTML = `
   }
   section{
     height:400px;
-    padding:25px;
+    padding:35px;
     margin-bottom:100px;
     display: flex;
     flex-direction: row;
