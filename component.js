@@ -210,6 +210,7 @@ const template = document.createElement('template');
 template.innerHTML = `
 <style>
 h3{
+    font-family: Arial, Helvetica, sans-serif;
     font-size: var(--h3);
     margin: var(--margin);
 }
