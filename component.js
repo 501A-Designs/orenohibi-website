@@ -210,9 +210,9 @@ const template = document.createElement('template');
 template.innerHTML = `
 <style>
 h3{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: var(--h3);
-    margin: var(--margin);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: var(--h3);
+  margin: var(--margin);
 }
 .imgCardClass {
   position: relative;
@@ -243,7 +243,7 @@ img{
 
 .imgCardClass img:hover{
     cursor: pointer;
-    transform:scale3d(0.95, 0.95, 0.95);
+    transform:scale3d(0.95, 0.95, 0.95) translateY(3%);
 }
 .imgCardClass:hover #imgBlur{
   opacity:0.5;
@@ -251,17 +251,17 @@ img{
   height:90%;
 }      
 @keyframes combackAni{
-    0%{
-        box-shadow: 5px 5px 10px light;
-        backdrop-filter: blur(0px);
-        border-radius: 5px;
-        top:50px;
-        transform: scale3d(0.5, 0.5, 0.5);
-    }
-    35%{
-        top:0px;
-        transform: scale3d(1.05, 1.05, 1.05);
-    }
+  0%{
+    box-shadow: 5px 5px 10px light;
+    backdrop-filter: blur(0px);
+    border-radius: 5px;
+    top:50px;
+    transform: scale3d(0.5, 0.5, 0.5);
+  }
+  35%{
+    top:0px;
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
 }
   </style>
   <section class="imgCardClass">
@@ -463,6 +463,8 @@ cardCarouselTemplate.innerHTML = `
   }
   ::slotted(*){
     width:300px;
+    height:300px;
+    object-fit: cover;
     border-radius:5px;
     margin-right:10px;
   }
