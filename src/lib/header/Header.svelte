@@ -16,8 +16,9 @@
 
 <style>
 	header {
-		background-color: white;
-		padding: 0.5em 0em;
+		/* background-color: white; */
+		background: linear-gradient(to top, rgba(255, 255, 255, 0.917) 0%,rgb(255, 255, 255) 100%);
+		padding: 0.5em 1em;
 		top: 0;
 		position: sticky;
 		display: flex;
