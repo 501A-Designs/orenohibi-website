@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+
+:root {
+	font-family: Arial, Helvetica, sans-serif;
+	--orenoGreen:#73b700;
+}
+
+h1{
+	font-size: 2em;
+	transform: scale(1, 0.85);
+	letter-spacing: -1px;
+	/* margin: var(--margin); */
+	/* animation: spreadAni 2s; */
+}
+p{
+	font-family: 'Noto Sans JP', sans-serif;
+	color: rgb(97, 97, 97);
+	margin-left: 1%;
+}
+
+a{
+	color: black;
+	text-decoration-color: var(--orenoGreen);
+}
+a:hover {
+	text-decoration-style: dashed;
+}
