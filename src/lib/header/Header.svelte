@@ -17,7 +17,7 @@
 <style>
 	header {
 		background-color: white;
-		padding: 1em 1.5em;
+		padding: 0.5em 0em;
 		top: 0;
 		position: sticky;
 		display: flex;
@@ -25,8 +25,8 @@
 		z-index: 10;
 	}
 	img{
-		width: 35px;
-		height: 35px;
+		width: 40px;
+		height: 40px;
 		margin: 0;
 		padding: 0;
 	}
@@ -35,5 +35,8 @@
 		justify-content: center;
 		align-items: center;
 		gap:1em;
+	}
+	nav a{
+		text-decoration-thickness: 2px;
 	}
 </style>

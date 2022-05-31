@@ -1,18 +1,22 @@
 <script>
+	export let link;
 </script>
 
-<button>
-    <slot/>
-</button>
+<a href={link}>
+	<div>
+		<slot/>
+	</div>
+</a>
 
 <style>
-	button {
+	div {
 		background-color:　var(--orenoGreen);
-        /* color:  rgb(47, 47, 47); */
-color: white;
+		color: white;
 		padding: 0.5em 1em;
         border: 2px solid #88bd2b;
 		border-radius: 5px;
         height: fit-content;
+		width:fit-content;
+		cursor:pointer;
 	}
 </style>

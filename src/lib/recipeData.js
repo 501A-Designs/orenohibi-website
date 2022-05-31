@@ -1,7 +1,7 @@
 export let recipeData = [
     {
         name: 'Iced Coffee',
-        thumbnailSrc: 'https://501a-designs.github.io/orenohibi-website/img/icedcoffee.jpg',
+        thumbnailSrc: 'img/icedcoffee.jpg',
         motto: 'これは割とマジでうまい笑',
         ingredients: [
             'コーヒー豆(30g)',
@@ -30,7 +30,7 @@ export let recipeData = [
     },
     {
         name: 'Lemonade v1',
-        thumbnailSrc: 'https://501a-designs.github.io/orenohibi-website/img/lemonade.jpg',
+        thumbnailSrc: 'img/lemonade.jpg',
         motto: '水道水及びダイソーのグラス使用、ケチなのがいいのだ',
         ingredients: [
             'グラス',
@@ -56,7 +56,7 @@ export let recipeData = [
     },
     {
         name: 'Cafe Latte',
-        thumbnailSrc: 'https://501a-designs.github.io/orenohibi-website/img/latte.jpg',
+        thumbnailSrc: 'img/latte.jpg',
         motto: 'インスタントコーヒー使用、お手軽がいいのだ！',
         ingredients: [
             'インスタントコーヒー(15g)',
@@ -80,7 +80,7 @@ export let recipeData = [
     },
     {
         name: 'Lemonade v2',
-        thumbnailSrc: 'https://501a-designs.github.io/orenohibi-website/img/lemonade2.jpg',
+        thumbnailSrc: 'img/lemonade2.jpg',
         motto: 'レモネード、甘酸っぱいんがまたいい',
         ingredients: [
             'グラス',
@@ -109,7 +109,7 @@ export let recipeData = [
     },
     {
         name: 'Cold Brew Coffee',
-        thumbnailSrc: 'https://501a-designs.github.io/orenohibi-website/img/coldbrewcoffee.jpg',
+        thumbnailSrc: 'img/coldbrewcoffee.jpg',
         motto: 'まろやかな味わい、スッキリとした飲み口',
         ingredients: [
             'コーヒー豆(40g)',
@@ -136,7 +136,7 @@ export let recipeData = [
     },
     {
         name: 'Matcha',
-        thumbnailSrc: 'https://501a-designs.github.io/orenohibi-website/img/matcha.jpg',
+        thumbnailSrc: 'img/matcha.jpg',
         motto: '抹茶、侘び寂びパワーを感じます',
         ingredients: [
             '抹茶(10g)',

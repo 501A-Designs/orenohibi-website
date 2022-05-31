@@ -1,0 +1,94 @@
+{
+  ".svelte-kit/build/index.js": {
+    "file": "index.js",
+    "src": ".svelte-kit/build/index.js",
+    "isEntry": true,
+    "imports": [
+      "_index-1259f1f6.js"
+    ],
+    "dynamicImports": [
+      "src/hooks.js"
+    ]
+  },
+  "src/routes/__layout.svelte": {
+    "file": "entries/pages/__layout.svelte.js",
+    "src": "src/routes/__layout.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-1259f1f6.js"
+    ],
+    "css": [
+      "assets/entries/pages/__layout.svelte-18559da9.css"
+    ],
+    "assets": [
+      "assets/logo-904a23f6.png"
+    ]
+  },
+  ".svelte-kit/runtime/components/error.svelte": {
+    "file": "entries/fallbacks/error.svelte.js",
+    "src": ".svelte-kit/runtime/components/error.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-1259f1f6.js"
+    ]
+  },
+  "src/routes/about.svelte": {
+    "file": "entries/pages/about.svelte.js",
+    "src": "src/routes/about.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-1259f1f6.js",
+      "_env-14926626.js"
+    ]
+  },
+  "src/routes/index.svelte": {
+    "file": "entries/pages/index.svelte.js",
+    "src": "src/routes/index.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-1259f1f6.js",
+      "_Button.svelte_svelte_type_style_lang-9cfde4ac.js"
+    ],
+    "css": [
+      "assets/entries/pages/index.svelte-5954825b.css"
+    ]
+  },
+  "src/routes/recipes/[id].svelte": {
+    "file": "entries/pages/recipes/_id_.svelte.js",
+    "src": "src/routes/recipes/[id].svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-1259f1f6.js",
+      "_Button.svelte_svelte_type_style_lang-9cfde4ac.js"
+    ],
+    "css": [
+      "assets/entries/pages/recipes/_id_.svelte-97ea8ebf.css"
+    ]
+  },
+  "src/routes/tools.svelte": {
+    "file": "entries/pages/tools.svelte.js",
+    "src": "src/routes/tools.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-1259f1f6.js",
+      "_env-14926626.js"
+    ]
+  },
+  "_index-1259f1f6.js": {
+    "file": "chunks/index-1259f1f6.js"
+  },
+  "_env-14926626.js": {
+    "file": "chunks/env-14926626.js"
+  },
+  "_Button.svelte_svelte_type_style_lang-9cfde4ac.js": {
+    "file": "chunks/Button.svelte_svelte_type_style_lang-9cfde4ac.js",
+    "css": [
+      "assets/Button.svelte_svelte_type_style_lang-175170a7.css"
+    ]
+  },
+  "src/hooks.js": {
+    "file": "chunks/hooks-55c46d5b.js",
+    "src": "src/hooks.js",
+    "isDynamicEntry": true
+  }
+}

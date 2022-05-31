@@ -31,7 +31,7 @@
 						<br/>
 						開発されたレシピを公開しております。
 					</p>
-					<Button>詳しく</Button>
+					<Button link={'/about'}>詳しく</Button>
 				</div>
 			</div>
 		</div>
@@ -40,11 +40,15 @@
 	<section style="margin:10% 0">
 		<div style="display:flex; justify-content:space-between;align-items:center;">
 			<h1>Recipes</h1>
-			<Button>もっと見る</Button>
+			<!-- <Button>もっと見る</Button> -->
 		</div>	
 		<section class="grid-1fr-1fr-1fr-1fr-1fr">
 			{#each recipeData as recipe}
-				<RecipeCard name={recipe.name} src={recipe.thumbnailSrc}/>
+				<RecipeCard
+					name={recipe.name}
+					src={recipe.thumbnailSrc}
+					link={recipeData.indexOf(recipe)}	
+				/>
 			{/each}
 		</section>
 	</section>
@@ -69,7 +73,7 @@
 							{news.content}
 						</News>
 					{/each}
-					<Button>もっと見る</Button>
+					<!-- <Button>もっと見る</Button> -->
 				</section>
 			</div>
 		</div>

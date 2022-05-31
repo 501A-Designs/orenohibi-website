@@ -1,0 +1,100 @@
+{
+  ".svelte-kit/runtime/client/start.js": {
+    "file": "start-bfe9491e.js",
+    "src": ".svelte-kit/runtime/client/start.js",
+    "isEntry": true,
+    "imports": [
+      "_index-92202d2e.js"
+    ],
+    "dynamicImports": [
+      "src/routes/__layout.svelte",
+      ".svelte-kit/runtime/components/error.svelte",
+      "src/routes/about.svelte",
+      "src/routes/index.svelte",
+      "src/routes/recipes/[id].svelte",
+      "src/routes/tools.svelte"
+    ]
+  },
+  "src/routes/__layout.svelte": {
+    "file": "pages/__layout.svelte-13824a3a.js",
+    "src": "src/routes/__layout.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-92202d2e.js"
+    ],
+    "css": [
+      "assets/pages/__layout.svelte-5987577e.css"
+    ],
+    "assets": [
+      "assets/logo-904a23f6.png"
+    ]
+  },
+  ".svelte-kit/runtime/components/error.svelte": {
+    "file": "error.svelte-b247e7da.js",
+    "src": ".svelte-kit/runtime/components/error.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-92202d2e.js"
+    ]
+  },
+  "src/routes/about.svelte": {
+    "file": "pages/about.svelte-0b43a213.js",
+    "src": "src/routes/about.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-92202d2e.js",
+      "_env-859c48a7.js"
+    ]
+  },
+  "src/routes/index.svelte": {
+    "file": "pages/index.svelte-273ad263.js",
+    "src": "src/routes/index.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-92202d2e.js",
+      "_Button.svelte_svelte_type_style_lang-9cfde4ac.js"
+    ],
+    "css": [
+      "assets/pages/index.svelte-a75377a8.css"
+    ]
+  },
+  "src/routes/recipes/[id].svelte": {
+    "file": "pages/recipes/_id_.svelte-897a60b3.js",
+    "src": "src/routes/recipes/[id].svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-92202d2e.js",
+      "_Button.svelte_svelte_type_style_lang-9cfde4ac.js"
+    ],
+    "css": [
+      "assets/pages/recipes/_id_.svelte-cfa7701c.css"
+    ]
+  },
+  "src/routes/tools.svelte": {
+    "file": "pages/tools.svelte-2c504c96.js",
+    "src": "src/routes/tools.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-92202d2e.js",
+      "_env-859c48a7.js"
+    ]
+  },
+  "_index-92202d2e.js": {
+    "file": "chunks/index-92202d2e.js"
+  },
+  "_env-859c48a7.js": {
+    "file": "chunks/env-859c48a7.js"
+  },
+  "_Button.svelte_svelte_type_style_lang-9cfde4ac.js": {
+    "file": "chunks/Button.svelte_svelte_type_style_lang-9cfde4ac.js",
+    "css": [
+      "assets/Button.svelte_svelte_type_style_lang-015cc5d7.css"
+    ]
+  }
+}

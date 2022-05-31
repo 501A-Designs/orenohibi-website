@@ -1,13 +1,16 @@
 <script>
     export let name;
     export let src;
+    export let link;
 </script>
 
-<div class='recipeCard'>
-    <!-- svelte-ignore a11y-img-redundant-alt -->
-    <img alt="image" {src}/>
-    <h4>{name}</h4>
-</div>
+<a href={`/recipes/${link}`}>
+    <div class='recipeCard' >
+        <!-- svelte-ignore a11y-img-redundant-alt -->
+        <img alt="image" {src}/>
+        <h4>{name}</h4>
+    </div>
+</a>
 
 <style>
     .recipeCard{
