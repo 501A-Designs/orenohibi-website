@@ -10,7 +10,7 @@
 	</div>
 	<nav>
 		<a href="/about">About</a>
-		<a href="/about">Recipes</a>
+		<a href="/tools">Tools</a>
 	</nav>
 </header>
 

@@ -49,31 +49,31 @@
 		</section>
 	</section>
 
-	<div class="grid-1fr-2fr">
-		<div>
-			<h1>
-				All Yours
-			</h1>
-			<p>
-				あなたのそばに寄り添うコーヒー
-				<br/>
-				#orenohibi で作ったドリンクを共有しよう
-			</p>
+	<section style="margin:10% 0">
+		<div class="grid-1fr-2fr">
+			<div>
+				<h1>
+					All Yours
+				</h1>
+				<p>
+					あなたのそばに寄り添うコーヒー
+					<br/>
+					#orenohibi で作ったドリンクを共有しよう
+				</p>
+			</div>
+			<div style="padding-top:0.5em;">
+				<section>
+					<h2>Oreno News</h2>
+					{#each newsData as news}
+						<News date={news.date}>
+							{news.content}
+						</News>
+					{/each}
+					<Button>もっと見る</Button>
+				</section>
+			</div>
 		</div>
-		<div style="padding-top:0.5em;">
-			<section>
-				<h2>Oreno News</h2>
-				{#each newsData as news}
-					<News date={news.date}>
-						{news.content}
-					</News>
-				{/each}
-				<Button>もっと見る</Button>
-			</section>
-		</div>
-	</div>
-
-
+	</section>
 </section>
 
 <style>
@@ -96,16 +96,5 @@
 		width: 80%;
 		display: flex;
 		align-items: center;
-	}
-
-	.grid-1fr-2fr{
-		display: grid;
-		grid-template-columns: 1fr 2fr;
-		gap:2em;
-	}
-	.grid-1fr-1fr-1fr-1fr-1fr{
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-		gap:0.5em;
 	}
 </style>

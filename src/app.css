@@ -25,3 +25,14 @@ a{
 a:hover {
 	text-decoration-style: dashed;
 }
+
+.grid-1fr-2fr{
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	gap:2em;
+}
+.grid-1fr-1fr-1fr-1fr-1fr{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	gap:0.5em;
+}

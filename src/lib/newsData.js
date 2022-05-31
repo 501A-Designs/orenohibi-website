@@ -1,5 +1,9 @@
 export let newsData = [
     {
+        date: '2022 5/31',
+        content: 'Orenohibi ウェブサイト第二リニューアル開始'
+    },
+    {
         date: '2021 7/15',
         content: '【放課後コーヒー開催】ポップアップ時のレシピ公開してます。'
     },
