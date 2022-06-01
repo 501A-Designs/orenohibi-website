@@ -1,4 +1,4 @@
-import { c as create_ssr_component, a as add_attribute, e as escape, v as validate_component, b as each } from "../../chunks/index-1259f1f6.js";
+import { c as create_ssr_component, e as escape, a as add_attribute, b as each, v as validate_component } from "../../chunks/index-1259f1f6.js";
 import { r as recipeData } from "../../chunks/Button.svelte_svelte_type_style_lang-9cfde4ac.js";
 let newsData = [
   {
@@ -18,19 +18,6 @@ let newsData = [
     content: "Orenohibi \u30A6\u30A7\u30D6\u30B5\u30A4\u30C8\u8A2D\u7ACB"
   }
 ];
-var Counter_svelte_svelte_type_style_lang = "";
-const css$3 = {
-  code: "div.svelte-k6bmkh{background-color:var(--orenoGreen);color:white;padding:0.5em 1em;border:2px solid #88bd2b;border-radius:5px;height:fit-content;width:fit-content;cursor:pointer}",
-  map: null
-};
-const Button = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let { link } = $$props;
-  if ($$props.link === void 0 && $$bindings.link && link !== void 0)
-    $$bindings.link(link);
-  $$result.css.add(css$3);
-  return `<a${add_attribute("href", link, 0)}><div class="${"svelte-k6bmkh"}">${slots.default ? slots.default({}) : ``}</div>
-</a>`;
-});
 var News_svelte_svelte_type_style_lang = "";
 const css$2 = {
   code: ".dateTag.svelte-xh2xsj{font-size:0.7em;background-color:#cdef92;color:white;color:black;border:none;padding:0.5em 1em;border-radius:25px;margin:0;width:fit-content}.newsContainer.svelte-xh2xsj{margin:0;padding:0.8em 0.5em 1em 0.5em;transform:translateX(15px);border-left:2px solid rgb(213, 213, 213)}",
@@ -83,11 +70,7 @@ const Routes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 						<br>
 						\u958B\u767A\u3055\u308C\u305F\u30EC\u30B7\u30D4\u3092\u516C\u958B\u3057\u3066\u304A\u308A\u307E\u3059\u3002
 					</p>
-					${validate_component(Button, "Button").$$render($$result, { link: "/about" }, {}, {
-    default: () => {
-      return `\u8A73\u3057\u304F`;
-    }
-  })}</div></div></div></div>
+					</div></div></div></div>
 
 	<section style="${"margin:10% 0"}"><div style="${"display:flex; justify-content:space-between;align-items:center;"}"><h1>Recipes</h1>
 			</div>	

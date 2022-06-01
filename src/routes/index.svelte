@@ -3,10 +3,8 @@
 </script>
 
 <script>
-
 	import {newsData} from '../lib/newsData';
 	import {recipeData} from '../lib/recipeData';
-	import Counter from '$lib/Counter.svelte';
 	import Button from '../lib/Button.svelte';
 	import News from '../lib/News.svelte';
 	import RecipeCard from '../lib/RecipeCard.svelte';
@@ -31,7 +29,7 @@
 						<br/>
 						開発されたレシピを公開しております。
 					</p>
-					<Button link={'/about'}>詳しく</Button>
+					<!-- <Button link={'/about'}>詳しく</Button> -->
 				</div>
 			</div>
 		</div>

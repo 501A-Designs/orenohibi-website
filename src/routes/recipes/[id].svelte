@@ -75,6 +75,7 @@
 		align-items:center;
 		flex-direction: column;
 		padding: 1em;
+		padding-top: 1.5em;
 		height:100%;
 		width: max-width;
 		border-radius: 15px 15px 0px 0px;

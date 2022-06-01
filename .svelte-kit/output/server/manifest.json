@@ -7,7 +7,7 @@
       "_index-1259f1f6.js"
     ],
     "dynamicImports": [
-      "src/hooks.js"
+      ".svelte-kit/build/hooks.js"
     ]
   },
   "src/routes/__layout.svelte": {
@@ -50,7 +50,7 @@
       "_Button.svelte_svelte_type_style_lang-9cfde4ac.js"
     ],
     "css": [
-      "assets/entries/pages/index.svelte-5954825b.css"
+      "assets/entries/pages/index.svelte-3482d4f0.css"
     ]
   },
   "src/routes/recipes/[id].svelte": {
@@ -62,7 +62,7 @@
       "_Button.svelte_svelte_type_style_lang-9cfde4ac.js"
     ],
     "css": [
-      "assets/entries/pages/recipes/_id_.svelte-97ea8ebf.css"
+      "assets/entries/pages/recipes/_id_.svelte-62970b7f.css"
     ]
   },
   "src/routes/tools.svelte": {
@@ -86,9 +86,9 @@
       "assets/Button.svelte_svelte_type_style_lang-175170a7.css"
     ]
   },
-  "src/hooks.js": {
-    "file": "chunks/hooks-55c46d5b.js",
-    "src": "src/hooks.js",
+  ".svelte-kit/build/hooks.js": {
+    "file": "chunks/hooks-1c45ba0b.js",
+    "src": ".svelte-kit/build/hooks.js",
     "isDynamicEntry": true
   }
 }
